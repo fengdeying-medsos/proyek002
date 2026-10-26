@@ -1,0 +1,423 @@
+/* Pengaturan Dasar & Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0f172a; /* Slate Dark Modern */
+    color: #f8fafc;
+    line-height: 1.7;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #1e293b;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 18px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    color: #6366f1;
+}
+
+.nav-links {
+    display: none;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+.btn-nav {
+    background: #6366f1;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-nav:hover {
+    background: #4f46e5;
+    transform: translateY(-1px);
+}
+
+/* Hero Section */
+.hero {
+    padding: 90px 0;
+    text-align: center;
+}
+
+.badge {
+    background: #1e293b;
+    color: #818cf8;
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 24px;
+    border: 1px solid #312e81;
+}
+
+.hero-content h2 {
+    font-size: 2.3rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.25;
+    letter-spacing: -1px;
+}
+
+.hero-content p {
+    font-size: 1.05rem;
+    color: #94a3b8;
+    max-width: 680px;
+    margin: 0 auto 35px auto;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    justify-content: center;
+}
+
+.btn-primary, .btn-secondary, .btn-whatsapp {
+    padding: 14px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s, background 0.2s;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primary {
+    background: #6366f1;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #4f46e5;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: #1e293b;
+    color: #f8fafc;
+    border: 1px solid #334155;
+}
+
+.btn-secondary:hover {
+    background: #334155;
+}
+
+/* Bagian Umum Judul */
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.section-title p {
+    color: #94a3b8;
+    font-size: 1.05rem;
+}
+
+/* Services Section */
+.services {
+    padding: 70px 0;
+    border-top: 1px solid #1e293b;
+}
+
+.service-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.service-card {
+    background: #1e293b;
+    padding: 35px 25px;
+    border-radius: 16px;
+    border: 1px solid #334155;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: #6366f1;
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.service-card h4 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.service-card p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+
+/* Portfolio Section */
+.portfolio {
+    padding: 70px 0;
+    border-top: 1px solid #1e293b;
+}
+
+.portfolio-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.portfolio-card {
+    background: #1e293b;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #334155;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+    border-color: #6366f1;
+}
+
+.card-img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-img-real {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-card:hover .card-img-real {
+    transform: scale(1.08);
+}
+
+.card-tag {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(15, 23, 42, 0.85);
+    color: #818cf8;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-info {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-info h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.card-info p {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    line-height: 1.5;
+}
+
+.tech-stack {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 5px;
+}
+
+.tech-stack span {
+    background: #0f172a;
+    color: #cbd5e1;
+    font-size: 0.75rem;
+    padding: 3px 10px;
+    border-radius: 4px;
+    border: 1px solid #334155;
+}
+
+.btn-card-link {
+    color: #6366f1;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+.btn-card-link:hover {
+    color: #818cf8;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 70px 0;
+    border-top: 1px solid #1e293b;
+}
+
+.testimonial-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.testimonial-card {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid #334155;
+}
+
+.quote {
+    font-style: italic;
+    color: #cbd5e1;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.client-name {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #ffffff;
+}
+
+.client-role {
+    font-size: 0.85rem;
+    color: #818cf8;
+}
+
+/* Footer Section */
+.footer {
+    background: #090d16;
+    padding: 80px 0;
+    text-align: center;
+    border-top: 1px solid #1e293b;
+}
+
+.footer-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.footer-content p {
+    color: #94a3b8;
+    margin-bottom: 30px;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-whatsapp {
+    background: #22c55e;
+    color: white;
+    box-shadow: 0 4px 20px rgba(34, 197, 94, 0.35);
+    font-size: 1.05rem;
+}
+
+.btn-whatsapp:hover {
+    background: #16a34a;
+    transform: translateY(-2px);
+}
+
+.copyright {
+    margin-top: 50px;
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+/* MEDIA QUERIES: Layar Tablet, Laptop, & TV 32 Inch */
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex;
+    }
+
+    .hero {
+        padding: 130px 0;
+    }
+
+    .hero-content h2 {
+        font-size: 3.5rem;
+    }
+
+    .hero-buttons {
+        flex-direction: row;
+    }
+
+    .service-grid, .portfolio-grid, .testimonial-grid {
+        flex-direction: row;
+    }
+
+    .service-card, .portfolio-card, .testimonial-card {
+        flex: 1;
+    }
+
+    .card-img-wrapper {
+        height: 220px;
+    }
+}
